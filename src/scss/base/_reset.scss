@@ -1,0 +1,24 @@
+//
+// ----------------------------------------------------------------------------
+// Base / Reset
+// ----------------------------------------------------------------------------
+//
+
+@use "@/scss/vendor/normalize";
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+button {
+  border: 0;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  display: flex;
+}

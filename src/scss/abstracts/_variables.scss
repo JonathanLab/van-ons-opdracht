@@ -1,0 +1,52 @@
+//
+// ----------------------------------------------------------------------------
+// Abstracts / Variables
+// ----------------------------------------------------------------------------
+//
+
+//
+// Colors
+// ----------------------------------------------------------------------------
+
+// TODO: Consolidate all gray and black values in a more logical way
+$white: #ffffff;
+$white-dark: #ffffffcc;
+$white-darker: #d8d8d8;
+
+$gray: #e0e0e0;
+$gray-dark: #f6f8f9;
+$gray-darkest: #eef0f1;
+$placeholder-gray: #aeaeae;
+
+$black: #000000;
+$black-light: #4b4b4b;
+$black-lighter: #595959;
+$black-lightest: #989898;
+
+$completed-primary: #818181;
+$completed-secondary: #aaaaaa;
+
+$blue: #003cfb;
+$blue-dark: #001c73;
+$green: #02c758;
+$red: #e43f28;
+$yellow: #faf6e9;
+$yellow-darker: #ebe7db;
+$yellow-darkest: #b89b36;
+
+$color-body: $black;
+
+//
+// Typography
+// ----------------------------------------------------------------------------
+
+$font-body: "MarkPro", sans-serif;
+
+//
+// Breakpoints
+// ----------------------------------------------------------------------------
+$screen-xs-min: 390px;
+$screen-sm-min: 640px;
+$screen-md-min: 768px;
+$screen-lg-min: 1024px;
+$screen-xl-min: 1280px;

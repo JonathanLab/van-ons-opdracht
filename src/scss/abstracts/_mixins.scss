@@ -1,0 +1,68 @@
+//
+// ----------------------------------------------------------------------------
+// Abstracts / Mixins
+// ----------------------------------------------------------------------------
+//
+@import "@/scss/abstracts/variables";
+
+@mixin xs {
+  @media (min-width: #{$screen-xs-min}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin container {
+  max-width: 100%;
+  height: auto;
+
+  @include sm {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include lg {
+    max-width: 50%;
+  }
+
+  @include xl {
+    max-width: 40%;
+  }
+}

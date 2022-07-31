@@ -1,0 +1,65 @@
+//
+// ----------------------------------------------------------------------------
+// React / Dropdown
+// ----------------------------------------------------------------------------
+//
+
+@use "@/scss/abstracts/functions";
+@use "@/scss/abstracts/variables";
+@import "@/scss/abstracts/mixins";
+
+.warning {
+  color: $red;
+}
+
+.dropdown {
+  position: absolute;
+  transform-origin: top right;
+  right: 0.5rem;
+  width: 10rem;
+  margin-top: 0.5rem;
+  border: 0.0625rem solid $gray;
+  border-radius: 0.3125rem;
+  box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.1);
+  background-color: $white;
+  overflow: hidden;
+}
+
+.dropdown__wrapper {
+  @include flex-column;
+  position: relative;
+  margin-left: auto;
+}
+
+.dropdown__item {
+  @include flex-row;
+  box-sizing: border-box;
+  width: 100%;
+  align-items: center;
+  font-size: 0.75rem;
+  padding: 0.75rem;
+  border-bottom: 0.0625rem solid $gray;
+  fill: $black-light;
+}
+
+.dropdown__item:hover {
+  background-color: $gray;
+}
+
+.dropdown__item--last {
+  @extend .dropdown__item;
+  border-bottom: 0;
+}
+
+.dropdown__itemIcon {
+  width: 0.8125rem !important;
+  height: 0.8125rem !important;
+  margin-bottom: 0.375rem;
+  margin-right: 0.625rem;
+  fill: $black-light;
+}
+
+.dropdown_itemIcon--trash {
+  @extend .dropdown__itemIcon;
+  fill: $red;
+}

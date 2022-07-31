@@ -1,0 +1,126 @@
+//
+// ----------------------------------------------------------------------------
+// React / AddTodo
+// ----------------------------------------------------------------------------
+//
+
+@use "@/scss/abstracts/functions";
+@use "@/scss/abstracts/variables";
+@import "@/scss/abstracts/mixins";
+
+.addTodo {
+  @include flex-column;
+  @include container;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 0.625rem 0.625rem 0 0;
+  padding: 2rem 1.6875rem;
+  background-color: white;
+  box-shadow: 0 0 0.9375rem rgba(0, 0, 0, 0.1);
+  z-index: 3;
+  pointer-events: all;
+}
+
+.addTodo__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(243, 243, 243, 0.5);
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+}
+
+.addTodo__titleWrapper {
+  @include flex-row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.addTodo__xmarkIcon {
+  width: 1rem !important;
+  height: 1rem !important;
+  fill: $black-lightest;
+  stroke-width: 10%;
+  stroke: $black-lightest;
+  margin-bottom: 0.125rem;
+}
+
+.addTodo__title {
+  font-weight: bold;
+  line-height: 1.75rem;
+  letter-spacing: 0.034375rem;
+}
+
+.addTodo__input {
+  border-width: 0;
+  border-radius: 3px;
+  background-color: $gray-dark;
+  box-shadow: 0 0.0625rem 0 $gray-darkest;
+  padding: 1rem;
+  line-height: 1.625rem;
+  margin-bottom: 1rem;
+  outline: none;
+}
+
+.addTodo__input::placeholder {
+  color: $placeholder-gray !important;
+}
+
+.addTodo__input--dateWrapper {
+  @extend .addTodo__input;
+  @include flex-row;
+  justify-content: space-between;
+  align-items: center;
+  color: $black-lighter;
+  padding: 0.5rem 1rem;
+}
+
+.addTodo__input--date {
+  @extend .addTodo__input;
+  background-color: $white;
+  padding: 0.5rem;
+  margin: 0;
+  box-shadow: 0 0.0625rem 0 rgba(216, 216, 216, 0.5);
+}
+
+.squareButton {
+  width: auto;
+  background-color: $blue;
+  color: $white;
+  box-shadow: 0 0.0625rem 0 $blue-dark;
+  border: 0;
+  border-radius: 0.1875rem;
+  padding: 1.0625rem;
+  font-weight: bold;
+}
+
+.squareButton:hover {
+  background-color: $blue-dark;
+}
+
+.addTodo__description {
+  border-width: 0;
+  border-radius: 3px;
+  height: 10rem;
+  width: auto;
+  resize: none;
+  box-shadow: 0 0.0625rem 0 $yellow-darker;
+  background-color: $yellow;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: $yellow-darkest;
+  outline: none;
+  line-height: 1.5rem;
+
+  @include xs {
+    height: 14rem;
+  }
+}
+
+textarea.addTodo__description::placeholder {
+  color: $yellow-darkest;
+}

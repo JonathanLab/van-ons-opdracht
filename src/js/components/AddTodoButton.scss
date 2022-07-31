@@ -1,0 +1,34 @@
+@use "@/scss/abstracts/functions";
+@use "@/scss/abstracts/variables";
+@import "@/scss/abstracts/mixins";
+
+.circularButton {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 100%;
+  width: 4rem;
+  height: 4rem;
+  background-color: $blue;
+  box-shadow: 0 0.625rem 0.9375rem rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.circularButton:hover {
+  background-color: $blue-dark;
+}
+
+.addTodoIcon {
+  width: 2rem !important;
+  height: 2rem !important;
+  fill: $white;
+  stroke: $white;
+  stroke-width: 10%;
+}

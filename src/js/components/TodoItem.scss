@@ -1,0 +1,125 @@
+//
+// ----------------------------------------------------------------------------
+// React / TodoItem
+// ----------------------------------------------------------------------------
+//
+
+@use "@/scss/abstracts/functions";
+@use "@/scss/abstracts/variables";
+@import "@/scss/abstracts/mixins";
+
+.todo__item {
+  @include flex-row;
+  padding: 1.3125rem 1rem 1rem;
+  margin-bottom: 1.25rem;
+  border: solid;
+  border-width: 0.125rem;
+  border-radius: 0.1875rem;
+  border-color: $gray;
+  z-index: 1;
+}
+
+.todo__item--overdue {
+  @extend .todo__item;
+  border-color: $red;
+}
+
+.todo__item--completed {
+  @extend .todo__item;
+  border-color: $gray;
+}
+
+.todo__statusIcon {
+  flex-shrink: 0;
+  width: 0.75rem !important;
+  height: 0.75rem !important;
+  padding: 0.06125rem;
+  margin-right: 1rem;
+  border: solid;
+  border-width: 0.125rem;
+  border-radius: 100%;
+  border-color: $black-lightest;
+  fill: $black-lightest;
+  stroke: $black-lightest;
+  stroke-width: 10%;
+}
+
+.todo__statusIcon--overdue {
+  @extend .todo__statusIcon;
+  fill: $red;
+  stroke: $red;
+  border-color: $red;
+}
+
+.todo__statusIcon--completed {
+  @extend .todo__statusIcon;
+  fill: $green;
+  stroke: $green;
+  border-color: $green;
+}
+.todo__titleWrapper {
+  @include flex-row;
+  justify-content: space-between;
+}
+
+.todo__wrapper {
+  width: 100%;
+}
+
+.todo__title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.todo__title--overdue {
+  @extend .todo__title;
+  color: $red;
+}
+
+.todo__title--completed {
+  @extend .todo__title;
+  color: $completed-primary;
+}
+
+.todo__description {
+  color: $black-lighter;
+  line-height: 1.375rem;
+  margin-bottom: 1rem;
+}
+
+.todo__description--overdue {
+  @extend .todo__description;
+}
+
+.todo__description--completed {
+  @extend .todo__description;
+  color: $completed-secondary;
+}
+
+.todo__date {
+  font-size: 0.75rem;
+  letter-spacing: 0.01875rem;
+  line-height: 1.375rem;
+  color: $black-lightest;
+}
+
+.todo__dateWrapper {
+  @include flex-row;
+  align-items: center;
+}
+
+.todo__dateIcon {
+  width: 0.6875rem !important;
+  height: 0.8125rem !important;
+  margin-right: 0.5rem;
+  fill: $black-lightest;
+  margin-bottom: 0.125rem;
+}
+
+.todo__optionsIcon {
+  height: 1.125rem !important;
+  fill: $black-lightest;
+  stroke: $black-lightest;
+  stroke-width: 10%;
+  align-self: flex-end;
+}

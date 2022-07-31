@@ -1,0 +1,13 @@
+//
+// ----------------------------------------------------------------------------
+// React / Icon
+// ----------------------------------------------------------------------------
+//
+
+@use "@/scss/abstracts/functions";
+
+.icon {
+  display: block;
+  width: var(--vo-icon-size, #{functions.rem(24)});
+  height: var(--vo-icon-size, #{functions.rem(24)});
+}
