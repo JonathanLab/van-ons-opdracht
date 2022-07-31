@@ -57,6 +57,7 @@
   stroke: $green;
   border-color: $green;
 }
+
 .todo__titleWrapper {
   @include flex-row;
   justify-content: space-between;
