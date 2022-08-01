@@ -25,7 +25,7 @@ const AddTodo = ({ toggleHandler, createTodo }) => {
     <motion.button
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      exit={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       className="addTodo__overlay"
     >
       <form className="addTodo" onSubmit={saveTodo}>
